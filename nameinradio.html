@@ -19,41 +19,37 @@
         <a href="templates.html">Templates</a>
     </div>
 
+    <!-- <div class="maintenance-container">
+        <h1>Website Onderhoud</h1>
+        <p>Onze website is momenteel in onderhoud. Probeer het later opnieuw.</p>
+    </div> -->
+
     <div id="info">
+        <label for="roepnummer">Roepnummer:</label><br>
+        <input type="text" id="roepnummer" name="roepnummer" required><br>
+
+        <label for="name">Naam:</label><br>
+        <input type="text" id="name" name="name" required><br>
+    </div>
+
+    <div id="preview">
+        <span>Visitekaartje Preview:</span>
+        <div id="card">
+            <span id="naamoutput">Geen Naam Ingevuld</span>
+        </div>
+    </div>
+
+    <div id="output-container">
+        
+        <input type="text" id="output-field" readonly style="width: 90%;">
+        <button id="copy-button">Kopieer</button><br><br><br>
         <label for="key-input">Kies een toets:</label><br>
         <input type="text" id="key-input" maxlength="3" placeholder="bijv. F10"><br>
     </div>
 
-    <div id="templates">
-        <h2>Politie</h2>
-        <div class="template">
-            <label>Verwijderd Taser Pinnen:</label>
-            <input type="text" id="politie-template-1" readonly>
-        </div>
-        <div class="template">
-            <label>Doet gordel van verdachte om/af:</label>
-            <input type="text" id="politie-template-2" readonly>
-        </div>
-
-        <h2>Ambulance</h2>
-        <div class="template">
-            <label>Controleert vitale functies:</label>
-            <input type="text" id="ambu-template-1" readonly>
-        </div>
-        <div class="template">
-            <label>Verbindt wond:</label>
-            <input type="text" id="ambu-template-2" readonly>
-        </div>
-
-        <h2>ANWB</h2>
-        <div class="template">
-            <label>Repareert voertuig:</label>
-            <input type="text" id="anwb-template-1" readonly>
-        </div>
-        <div class="template">
-            <label>Sleepwagen aankoppelen:</label>
-            <input type="text" id="anwb-template-2" readonly>
-        </div>
+    <div id="f8-output-container">
+        <label for="f8-output-field">F8 Code:</label><br>
+        <input type="text" id="f8-output-field" readonly>
     </div>
 
     <div class="footer">
@@ -70,6 +66,6 @@
         </a>
     </div>
     
-    <script src="templates-script.js"></script>
+    <script src="nameinradio.js"></script>
 </body>
 </html>
