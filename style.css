@@ -1,0 +1,33 @@
+:root {
+    background-1: #f5f5f5;
+    background-2: #f0f0f0;
+    text-1: #333;
+    header-1: #333;
+}
+
+body {
+    background-color: var(--background-1);
+    color: var(--text-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.maintenance-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--background-2);
+    border-radius: 10px;
+    background-color: var(--background-2);
+}
+
+h1 {
+    color: var(--header-1);
+}
+
+p {
+    margin-top: 10px;
+}
