@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameInput = document.getElementById('name');
     const nameColorDropdown = document.getElementById('name-color-dropdown');
 
+    const rankInput = document.getElementById('rank');
+    const rankColorDropdown = document.getElementById('rank-color-dropdown');
+
     const nameOutput = document.getElementById('naamoutput');
     const outputField = document.getElementById('output-field');
     const copyButton = document.getElementById('copy-button');
@@ -43,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     roepnummerColorDropdown.addEventListener('change', updatePreview);
     nameInput.addEventListener('input', updatePreview);
     nameColorDropdown.addEventListener('change', updatePreview);
+    rankInput.addEventListener('input', updatePreview);
+    rankColorDropdown.addEventListener('change', updatePreview);
 
     keyInput.addEventListener('input', updateF8Code);
     outputField.addEventListener('input', updateF8Code);
@@ -63,7 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const nameColor = colorMap[nameColorDropdown.value] || '';
         const formattedName = `${nameColor}${name}~s~`;
 
-        const formattedOutput = [formattedRoepnummer, formattedName].filter(Boolean).join(' | ');
+        const rank = rankInput.value || '';
+        const rankColor = colorMap[rankColorDropdown.value] || '';
+        const formattedRank = rank ? `${rankColor}${rank}~s~` : '';
+
+        const formattedOutput = [formattedRoepnummer, formattedName, formattedRank].filter(Boolean).join(' | ');
         nameOutput.innerHTML = applyStyles(formattedOutput);
         outputField.value = formattedOutput;
 
