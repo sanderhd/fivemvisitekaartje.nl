@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fivem Visitekaartje Templates</title>
+    <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="Fivem Visitekaartje Templates">
+    <meta property="og:description" content="Voorgeconfigureerde templates voor Fivem.">
+    <meta property="og:url" content="https://fivemvisitekaartje.nl/templates">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="politie.html">Politie</a>
+        <a href="templates.html">Templates</a>
+    </div>
+
+    <div id="info">
+        <label for="key-input">Kies een toets:</label><br>
+        <input type="text" id="key-input" maxlength="3" placeholder="bijv. F10"><br>
+    </div>
+
+    <div id="templates">
+        <h2>Politie</h2>
+        <div class="template">
+            <label>Verwijderd Taser Pinnen:</label>
+            <input type="text" id="politie-template-1" readonly>
+        </div>
+        <div class="template">
+            <label>Doet gordel van verdachte om/af:</label>
+            <input type="text" id="politie-template-2" readonly>
+        </div>
+
+        <h2>Ambulance</h2>
+        <div class="template">
+            <label>Controleert vitale functies:</label>
+            <input type="text" id="ambu-template-1" readonly>
+        </div>
+        <div class="template">
+            <label>Verbindt wond:</label>
+            <input type="text" id="ambu-template-2" readonly>
+        </div>
+
+        <h2>ANWB</h2>
+        <div class="template">
+            <label>Repareert voertuig:</label>
+            <input type="text" id="anwb-template-1" readonly>
+        </div>
+        <div class="template">
+            <label>Sleepwagen aankoppelen:</label>
+            <input type="text" id="anwb-template-2" readonly>
+        </div>
+    </div>
+
+    <script src="templates-script.js"></script>
+</body>
+</html>

@@ -5,55 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fivem Visitekaartje</title>
     <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="Fivem Visitekaartje">
-    <meta property="og:description" content="Maak je eigen visitekaartje voor Fivem.">
-    <meta property="og:image" content="path/to/your/image.jpg">
-    <meta property="og:url" content="https://fivemvisitekaartje.nl/">
+    <meta property="og:title" content="Fivem Visitekaartje - Overheid">
+    <meta property="og:description" content="Maak je eigen overheids visitekaartje voor Fivem.">
+    <meta property="og:url" content="https://fivemvisitekaartje.nl/overheid">
 </head>
 <body>
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="overheid.html">Overheid</a>
-        <a href="templates.html">Templates</a>
     </div>
-    
+
+    <!-- <div class="maintenance-container">
+        <h1>Website Onderhoud</h1>
+        <p>Onze website is momenteel in onderhoud. Probeer het later opnieuw.</p>
+    </div> -->
+
     <div id="info">
+        <label for="roepnummer">Roepnummer:</label><br>
+        <input type="text" id="roepnummer" name="roepnummer" required><br>
+        <label for="roepnummer-color-dropdown">Kies een kleur voor Roepnummer:</label>
+        <select id="roepnummer-color-dropdown" class="color-dropdown">
+            <option value="">Geen</option>
+            <option value="Red">Rood</option>
+            <option value="Blue">Blauw</option>
+            <option value="Green">Groen</option>
+            <option value="Yellow">Geel</option>
+            <option value="Purple">Paars</option>
+            <option value="Grey">Grijs</option>
+            <option value="Dark Grey">Donker Grijs</option>
+            <option value="Black">Zwart</option>
+            <option value="Orange">Oranje</option>
+        </select><br>
+
         <label for="name">Naam:</label><br>
         <input type="text" id="name" name="name" required><br>
         <label for="name-color-dropdown">Kies een kleur voor Naam:</label>
         <select id="name-color-dropdown" class="color-dropdown">
-            <option value="">Geen</option>
-            <option value="Red">Rood</option>
-            <option value="Blue">Blauw</option>
-            <option value="Green">Groen</option>
-            <option value="Yellow">Geel</option>
-            <option value="Purple">Paars</option>
-            <option value="Grey">Grijs</option>
-            <option value="Dark Grey">Donker Grijs</option>
-            <option value="Black">Zwart</option>
-            <option value="Orange">Oranje</option>
-        </select><br>
-
-        <label for="telefoon">Telefoon Nummer (Optioneel):</label><br>
-        <input type="text" id="telefoon" name="telefoon"><br>
-        <label for="phone-color-dropdown">Kies een kleur voor Telefoon:</label>
-        <select id="phone-color-dropdown" class="color-dropdown">
-            <option value="">Geen</option>
-            <option value="Red">Rood</option>
-            <option value="Blue">Blauw</option>
-            <option value="Green">Groen</option>
-            <option value="Yellow">Geel</option>
-            <option value="Purple">Paars</option>
-            <option value="Grey">Grijs</option>
-            <option value="Dark Grey">Donker Grijs</option>
-            <option value="Black">Zwart</option>
-            <option value="Orange">Oranje</option>
-        </select><br>
-
-        <label for="deepweb">Deepweb (Optioneel):</label><br>
-        <input type="text" id="deepweb" name="deepweb"><br>
-        <label for="deepweb-color-dropdown">Kies een kleur voor Deepweb:</label>
-        <select id="deepweb-color-dropdown" class="color-dropdown">
             <option value="">Geen</option>
             <option value="Red">Rood</option>
             <option value="Blue">Blauw</option>
@@ -83,9 +70,9 @@
 
     <div id="f8-output-container">
         <label for="f8-output-field">F8 Code:</label><br>
-        <input type="text" id="f8-output-field" readonly>
+        <input type="text" id="f8-output-field" readonly style="width: 90%;">
     </div>
     
-    <script src="script.js"></script>
+    <script src="overheid.js"></script>
 </body>
 </html>

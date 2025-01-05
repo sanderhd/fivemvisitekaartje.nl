@@ -118,3 +118,17 @@ input[type="text"], input[type="color"] {
 #copy-button:hover {
     background-color: #555;
 }
+
+#f8-output-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#f8-output-field {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid var(--background-2);
+    border-radius: 5px;
+    background-color: var(--background-2);
+    color: var(--text-1);
+}
