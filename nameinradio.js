@@ -34,11 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         f8OutputField.value = f8Code;
     }
 
-    copyButton.addEventListener('click', function() {
-        outputField.select();
-        document.execCommand('copy');
-        alert('Tekst gekopieerd naar klembord!');
-    });
 
     // Initial call to update the F8 code preview
     updateF8Code();

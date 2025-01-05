@@ -104,7 +104,7 @@ input[type="text"], input[type="color"] {
     color: var(--text-1);
 }
 
-#copy-button {
+.copy-button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -115,7 +115,7 @@ input[type="text"], input[type="color"] {
     display: inline-block;
 }
 
-#copy-button:hover {
+.copy-button:hover {
     background-color: #555;
 }
 

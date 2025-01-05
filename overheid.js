@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const nameOutput = document.getElementById('naamoutput');
     const outputField = document.getElementById('output-field');
-    const copyButton = document.getElementById('copy-button');
 
     const keyInput = document.getElementById('key-input');
     const f8OutputField = document.getElementById('f8-output-field');
@@ -86,12 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const f8Code = key ? `bind keyboard ${key} "me ${text}"` : '';
         f8OutputField.value = f8Code;
     }
-
-    copyButton.addEventListener('click', function() {
-        outputField.select();
-        document.execCommand('copy');
-        alert('Tekst gekopieerd naar klembord!');
-    });
 
     copyF8Button.addEventListener('click', function() {
         f8OutputField.select();
