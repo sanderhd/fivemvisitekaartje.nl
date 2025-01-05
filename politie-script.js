@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const roepnummerInput = document.getElementById('roepnummer');
+    const roepnummerColorDropdown = document.getElementById('roepnummer-color-dropdown');
+
     const nameInput = document.getElementById('name');
     const nameColorDropdown = document.getElementById('name-color-dropdown');
-
-    const phoneInput = document.getElementById('telefoon');
-    const phoneColorDropdown = document.getElementById('phone-color-dropdown');
-
-    const deepwebInput = document.getElementById('deepweb');
-    const deepwebColorDropdown = document.getElementById('deepweb-color-dropdown');
 
     const nameOutput = document.getElementById('naamoutput');
     const outputField = document.getElementById('output-field');
     const copyButton = document.getElementById('copy-button');
-    const themeToggleButton = document.getElementById('theme-toggle-button');
 
     const keyInput = document.getElementById('key-input');
     const f8OutputField = document.getElementById('f8-output-field');
@@ -43,16 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
         '~n~': '<br>'
     };
 
+    roepnummerInput.addEventListener('input', updatePreview);
+    roepnummerColorDropdown.addEventListener('change', updatePreview);
     nameInput.addEventListener('input', updatePreview);
     nameColorDropdown.addEventListener('change', updatePreview);
-    phoneInput.addEventListener('input', updatePreview);
-    phoneColorDropdown.addEventListener('change', updatePreview);
-    deepwebInput.addEventListener('input', updatePreview);
-    deepwebColorDropdown.addEventListener('change', updatePreview);
-
-    themeToggleButton.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-    });
 
     keyInput.addEventListener('input', updateF8Code);
     outputField.addEventListener('input', updateF8Code);
@@ -64,19 +54,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updatePreview() {
+        const roepnummer = roepnummerInput.value || 'Geen Roepnummer Ingevuld';
+        const roepnummerColor = colorMap[roepnummerColorDropdown.value] || '';
+        const formattedRoepnummer = `${roepnummerColor}${roepnummer}~s~`;
+
         const name = nameInput.value || 'Geen Naam Ingevuld';
         const nameColor = colorMap[nameColorDropdown.value] || '';
         const formattedName = `${nameColor}${name}~s~`;
 
-        const phone = phoneInput.value || '';
-        const phoneColor = colorMap[phoneColorDropdown.value] || '';
-        const formattedPhone = phone ? `${phoneColor}${phone}~s~` : '';
-
-        const deepweb = deepwebInput.value || '';
-        const deepwebColor = colorMap[deepwebColorDropdown.value] || '';
-        const formattedDeepweb = deepweb ? `${deepwebColor}${deepweb}~s~` : '';
-
-        const formattedOutput = [formattedName, formattedPhone, formattedDeepweb].filter(Boolean).join(' | ');
+        const formattedOutput = [formattedRoepnummer, formattedName].filter(Boolean).join(' | ');
         nameOutput.innerHTML = applyStyles(formattedOutput);
         outputField.value = formattedOutput;
 
