@@ -132,3 +132,22 @@ input[type="text"], input[type="color"] {
     background-color: var(--background-2);
     color: var(--text-1);
 }
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--text-1);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}

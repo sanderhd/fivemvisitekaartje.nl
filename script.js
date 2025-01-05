@@ -50,12 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     deepwebInput.addEventListener('input', updatePreview);
     deepwebColorDropdown.addEventListener('change', updatePreview);
 
-    themeToggleButton.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-    });
-
     keyInput.addEventListener('input', updateF8Code);
     outputField.addEventListener('input', updateF8Code);
+    f8OutputField.addEventListener('input', updateF8Code);
 
     function applyStyles(text) {
         return text.replace(/~[rbygpcmuohs]~/g, match => {
@@ -84,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateF8Code() {
-        const key = keyInput.value || '';
-        const text = outputField.value || '';
+        const key = keyInput.value.trim();
+        const text = outputField.value.trim();
         const f8Code = key ? `bind keyboard ${key} "me ${text}"` : '';
         f8OutputField.value = f8Code;
     }
@@ -95,4 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.execCommand('copy');
         alert('Tekst gekopieerd naar klembord!');
     });
+
+    // Initial call to update the F8 code preview
+    updateF8Code();
 });

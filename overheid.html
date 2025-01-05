@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fivem Visitekaartje</title>
     <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="Fivem Visitekaartje - Overheid">
-    <meta property="og:description" content="Maak je eigen overheids visitekaartje voor Fivem.">
-    <meta property="og:url" content="https://fivemvisitekaartje.nl/overheid">
+    <meta property="og:title" content="Fivem Visitekaartje - Politie">
+    <meta property="og:description" content="Maak je eigen politie visitekaartje voor Fivem.">
+    <meta property="og:url" content="https://fivemvisitekaartje.nl/politie">
 </head>
 <body>
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="overheid.html">Overheid</a>
+        <a href="templates.html">Templates</a>
     </div>
 
     <!-- <div class="maintenance-container">
@@ -62,15 +63,23 @@
     </div>
 
     <div id="output-container">
+        
+        <input type="text" id="output-field" readonly style="width: 90%;">
+        <button id="copy-button">Kopieer</button><br><br><br>
         <label for="key-input">Kies een toets:</label><br>
         <input type="text" id="key-input" maxlength="3" placeholder="bijv. F10"><br>
-        <input type="text" id="output-field" readonly style="width: 90%;">
-        <button id="copy-button">Kopieer</button>
     </div>
 
     <div id="f8-output-container">
         <label for="f8-output-field">F8 Code:</label><br>
-        <input type="text" id="f8-output-field" readonly style="width: 90%;">
+        <input type="text" id="f8-output-field" readonly>
+    </div>
+
+    <div class="footer">
+        <a href="https://discord.com/users/1265737667975577721" target="_blank">
+            <img src="discord.png" alt="Discord Logo">
+            qflw9
+        </a>
     </div>
     
     <script src="overheid.js"></script>
