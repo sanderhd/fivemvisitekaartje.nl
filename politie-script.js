@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateF8Code() {
-        const key = keyInput.value || 'i';
+        const key = keyInput.value || '';
         const text = outputField.value || '';
-        const f8Code = `bind keyboard ${key} "me ${text}"`;
+        const f8Code = key ? `bind keyboard ${key} "me ${text}"` : '';
         f8OutputField.value = f8Code;
     }
 
