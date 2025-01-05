@@ -1,19 +1,45 @@
 :root {
-    background-1: #f5f5f5;
-    background-2: #f0f0f0;
-    text-1: #333;
-    header-1: #333;
+    --background-1: #0E121B;
+    --background-2: #171C26;
+    --text-1: #FFFFFF;
+    --header-1: #FFFFFF;
+    --button-bg: #3369FF;
+    --button-text: #FFFFFF;
 }
 
 body {
     background-color: var(--background-1);
     color: var(--text-1);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: var(--background-2);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--text-1);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: var(--button-bg);
 }
 
 .maintenance-container {
@@ -30,4 +56,65 @@ h1 {
 
 p {
     margin-top: 10px;
+}
+
+#info {
+    margin-top: 60px; /* Adjust for navbar height */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#card {
+    padding: 10px;
+    border: 1px solid var(--background-2);
+    border-radius: 5px;
+    background-color: var(--background-2);
+}
+
+.color-dropdown {
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="color"] {
+    background-color: var(--background-2);
+    color: var(--text-1);
+    border: 1px solid var(--background-2);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#output-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#output-field {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid var(--background-2);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--background-2);
+    color: var(--text-1);
+}
+
+#copy-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+}
+
+#copy-button:hover {
+    background-color: #555;
 }
