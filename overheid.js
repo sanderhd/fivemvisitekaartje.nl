@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const keyInput = document.getElementById('key-input');
     const f8OutputField = document.getElementById('f8-output-field');
+    const copyF8Button = document.getElementById('copy-f8-button');
 
     const colorMap = {
         'Red': '~r~',
@@ -90,6 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
         outputField.select();
         document.execCommand('copy');
         alert('Tekst gekopieerd naar klembord!');
+    });
+
+    copyF8Button.addEventListener('click', function() {
+        f8OutputField.select();
+        document.execCommand('copy');
+        alert('F8 Code gekopieerd naar klembord!');
     });
 
     // Initial call to update the F8 code preview
