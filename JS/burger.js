@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const nameOutput = document.getElementById('naamoutput');
     const outputField = document.getElementById('output-field');
-    const copyButton = document.getElementById('copy-button');
+    const copyButton = document.getElementById('copy-button'); // Ensure this element exists in the HTML
 
     const keyInput = document.getElementById('key-input');
     const f8OutputField = document.getElementById('f8-output-field');
