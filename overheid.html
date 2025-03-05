@@ -1,110 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fivem Visitekaartje</title>
-    <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="Fivem Visitekaartje - Politie">
-    <meta property="og:description" content="Maak je eigen politie visitekaartje voor Fivem.">
-    <meta property="og:url" content="https://fivemvisitekaartje.nl/politie">
-</head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Onderwereld</a>
-        <a href="overheid.html">Overheid</a>
-        <a href="nameinradio.html">Name In Radio</a>
-        <a href="templates.html">Templates</a>
-    </div>
-
-    <!-- <div class="maintenance-container">
-        <h1>Website Onderhoud</h1>
-        <p>Onze website is momenteel in onderhoud. Probeer het later opnieuw.</p>
-    </div> -->
-
-    <div id="info">
-        <label for="roepnummer">Roepnummer:</label><br>
-        <input type="text" id="roepnummer" name="roepnummer" required><br>
-        <label for="roepnummer-color-dropdown">Kies een kleur voor Roepnummer:</label>
-        <select id="roepnummer-color-dropdown" class="color-dropdown">
-            <option value="">Geen</option>
-            <option value="Red">Rood</option>
-            <option value="Blue">Blauw</option>
-            <option value="Green">Groen</option>
-            <option value="Yellow">Geel</option>
-            <option value="Purple">Paars</option>
-            <option value="Grey">Grijs</option>
-            <option value="Dark Grey">Donker Grijs</option>
-            <option value="Black">Zwart</option>
-            <option value="Orange">Oranje</option>
-        </select><br>
-
-        <label for="name">Naam:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="name-color-dropdown">Kies een kleur voor Naam:</label>
-        <select id="name-color-dropdown" class="color-dropdown">
-            <option value="">Geen</option>
-            <option value="Red">Rood</option>
-            <option value="Blue">Blauw</option>
-            <option value="Green">Groen</option>
-            <option value="Yellow">Geel</option>
-            <option value="Purple">Paars</option>
-            <option value="Grey">Grijs</option>
-            <option value="Dark Grey">Donker Grijs</option>
-            <option value="Black">Zwart</option>
-            <option value="Orange">Oranje</option>
-        </select><br>
-
-        <label for="rank">Rang:</label><br>
-        <input type="text" id="rank" name="rank" required><br>
-        <label for="rank-color-dropdown">Kies een kleur voor Rang:</label>
-        <select id="rank-color-dropdown" class="color-dropdown">
-            <option value="">Geen</option>
-            <option value="Red">Rood</option>
-            <option value="Blue">Blauw</option>
-            <option value="Green">Groen</option>
-            <option value="Yellow">Geel</option>
-            <option value="Purple">Paars</option>
-            <option value="Grey">Grijs</option>
-            <option value="Dark Grey">Donker Grijs</option>
-            <option value="Black">Zwart</option>
-            <option value="Orange">Oranje</option>
-        </select>
-    </div>
-
-    <div id="preview">
-        <span>Visitekaartje Preview:</span>
-        <div id="card">
-            <span id="naamoutput">Geen Naam Ingevuld</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fivem Visitekaartje</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta property="og:title" content="Fivem Visitekaartje - Politie">
+        <meta property="og:description" content="Maak je eigen politie visitekaartje voor Fivem.">
+        <meta property="og:url" content="https://fivemvisitekaartje.nl/politie">
+        <link rel="shortcut icon" href="FVS.png" type="image/x-icon">
+    </head>
+    <body class="bg-gray-800 text-white pt-20 flex items-center justify-center">
+        <div class="container min-h-screen flex flex-col items-center justify-between">
+            <nav class="bg-white border-gray-200 dark:bg-gray-900 w-full fixed top-0 left-0 right-0 z-50">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="https://fivemvisitekaartje.nl/" class="flex items-center space-x-3">
+                        <img src="Images/FVS.png" class="h-8" alt="FivemVisitekaartje" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fivemvisitekaartje</span>
+                    </a>
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                            <li>
+                                <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="burger.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Burger Kaartjes</a>
+                            </li>
+                            <li>
+                                <a href="nameinradio.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Name In Radio</a>
+                            </li>
+                            <li>
+                                <a href="overheid.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Overheid</a>
+                            </li>
+                            <li>
+                                <a href="templates.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Overheid Templates</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="flex justify-center flex-grow w-full">
+                <div class="w-full max-w-4xl">
+                    <div id="info">
+                        <label for="roepnummer" class="block text-sm/6 font-medium text-white text-1xl">Roepnummer:</label><br>
+                        <div class="mt-2">
+                            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                                <input type="text" id="roepnummer" name="roepnummer" required class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                            </div>
+                        </div>
+                        <label for="roepnummer-color-dropdown" class="block text-sm/6 font-medium text-white text-1xl">Kies een kleur voor Roepnummer:</label>
+                        <select id="roepnummer-color-dropdown" class="color-dropdown col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="">Geen</option>
+                            <option value="Red">Rood</option>
+                            <option value="Blue">Blauw</option>
+                            <option value="Green">Groen</option>
+                            <option value="Yellow">Geel</option>
+                            <option value="Purple">Paars</option>
+                            <option value="Grey">Grijs</option>
+                            <option value="Dark Grey">Donker Grijs</option>
+                            <option value="Black">Zwart</option>
+                            <option value="Orange">Oranje</option>
+                        </select><br>
+                        <label for="name" class="block text-sm/6 font-medium text-white text-1xl">Naam:</label><br>
+                        <div class="mt-2">
+                            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                                <input type="text" id="name" name="name" required class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                            </div>
+                        </div>
+                        <label for="name-color-dropdown" class="block text-sm/6 font-medium text-white text-1xl">Kies een kleur voor Naam:</label>
+                        <select id="name-color-dropdown" class="color-dropdown col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="">Geen</option>
+                            <option value="Red">Rood</option>
+                            <option value="Blue">Blauw</option>
+                            <option value="Green">Groen</option>
+                            <option value="Yellow">Geel</option>
+                            <option value="Purple">Paars</option>
+                            <option value="Grey">Grijs</option>
+                            <option value="Dark Grey">Donker Grijs</option>
+                            <option value="Black">Zwart</option>
+                            <option value="Orange">Oranje</option>
+                        </select><br>
+                        <label for="rank" class="block text-sm/6 font-medium text-white text-1xl">Rang:</label><br>
+                        <div class="mt-2">
+                            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                                <input type="text" id="rank" name="rank" required class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                            </div>
+                        </div>
+                        <label for="rank-color-dropdown" class="block text-sm/6 font-medium text-white text-1xl">Kies een kleur voor Rang:</label>
+                        <select id="rank-color-dropdown" class="color-dropdown col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="">Geen</option>
+                            <option value="Red">Rood</option>
+                            <option value="Blue">Blauw</option>
+                            <option value="Green">Groen</option>
+                            <option value="Yellow">Geel</option>
+                            <option value="Purple">Paars</option>
+                            <option value="Grey">Grijs</option>
+                            <option value="Dark Grey">Donker Grijs</option>
+                            <option value="Black">Zwart</option>
+                            <option value="Orange">Oranje</option>
+                        </select>
+                    </div>
+                    <div id="preview">
+                        <span>Visitekaartje Preview:</span>
+                        <div id="card">
+                            <span id="naamoutput">Geen Naam Ingevuld</span>
+                        </div>
+                    </div>
+                    <div id="output-container">
+                        <label for="output-field" class="block text-sm/6 font-medium text-white text-1xl">Output Field:</label><br>
+                        <div class="mt-2">
+                            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                                <input type="text" id="output-field" readonly class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                            </div>
+                        </div>
+                        <label for="key-input" class="block text-sm/6 font-medium text-white text-1xl">Kies een toets:</label><br>
+                        <div class="mt-2">
+                            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                                <input type="text" id="key-input" maxlength="15" placeholder="bijv. F10" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="f8-output-container">
+                        <label for="f8-output-field" class="block text-sm/6 font-medium text-white text-1xl">F8 Code:</label><br>
+                        <div class="mt-2">
+                            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                                <input type="text" id="f8-output-field" readonly class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                            </div>
+                        </div>
+                        <button id="copy-f8-button" class="bg-blue-500 text-white p-2 mt-4">Kopieer F8 Code</button>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-gray-900 text-white py-8 w-full fixed bottom-0 left-0 right-0">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap justify-between">
+                        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                            <h5 class="text-lg font-bold">Fivem Visite Kaartje</h5>
+                            <p class="text-sm">&copy; fivemvisitekaartje.nl 2025 - All rights reserved</p>
+                        </div>
+                        <div class="w-full md:w-1/3">
+                            <h6 class="text-lg font-semibold">Links</h6>
+                            <a href="https://discord.com/users/1265737667975577721" target="_blank" class="flex items-center mb-2">
+                                <img src="Images/discord.png" alt="Discord Logo" class="w-6 h-6 mr-2" />
+                                qflw9
+                            </a>
+                            <a href="https://discord.com/users/908007927170867231" target="_blank" class="flex items-center">
+                                <img src="Images/discord.png" alt="Discord Logo" class="w-6 h-6 mr-2" />
+                                pinda.pdf
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </div>
-
-    <div id="output-container">
-        <input type="text" id="output-field" readonly style="width: 90%;">
-        <label for="key-input">Kies een toets:</label><br>
-        <input type="text" id="key-input" maxlength="15" placeholder="bijv. F10"><br>
-    </div>
-
-    <div id="f8-output-container">
-        <label for="f8-output-field">F8 Code:</label><br>
-        <input type="text" id="f8-output-field" readonly>
-        <button id="copy-f8-button" class="copy-button">Kopieer F8 Code</button>
-    </div>
-
-    <div class="footer">
-        <a href="https://discord.com/users/1265737667975577721" target="_blank">
-            <img src="discord.png" alt="Discord Logo">
-            qflw9
-        </a>
-    </div>
-
-    <div class="footer">
-        <a href="https://discord.com/users/908007927170867231" target="_blank">
-            <img src="discord.png" alt="Discord Logo">
-            pinda.pdf
-        </a>
-    </div>
-    
-    <script src="JS/overheid.js"></script>
-</body>
+        <script src="JS/overheid.js"></script>
+    </body>
 </html>

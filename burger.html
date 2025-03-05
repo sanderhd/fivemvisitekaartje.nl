@@ -14,8 +14,8 @@
         <meta property="og:url" content="https://fivemvisitekaartje.nl/" />
         <link rel="shortcut icon" href="FVS.png" type="image/x-icon" />
     </head>
-    <body class="bg-gray-800 text-white pt-16">
-        <div class="container">
+    <body class="bg-gray-800 text-white pt-20 flex items-center justify-center">
+        <div class="container min-h-screen flex flex-col items-center justify-between">
             <nav class="bg-white border-gray-200 dark:bg-gray-900 w-full fixed top-0 left-0 right-0 z-50">
                 <div
                     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -74,280 +74,278 @@
                     </div>
                 </div>
             </nav>
-
-            <div id="info" class="p-4 ">
-                <div class="mb-4">
-                    <label
-                        for="name"
-                        class="block text-sm/6 font-medium text-white text-1xl"
-                        >Naam:</label
-                    >
-                    <div class="mt-2">
-                        <div
-                            class="flex items-center rounded-md bg-white pl-3 pr-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+            <div class="flex justify-center flex-grow w-full">
+                <div class="w-full max-w-4xl">
+                    <div id="info" class="p-4">
+                        <div class="mb-4">
+                            <label
+                                for="name"
+                                class="block text-sm/6 font-medium text-white text-1xl"
+                                >Naam:</label
+                            >
+                            <div class="mt-2">
+                                <div
+                                    class="flex items-center rounded-md bg-white pl-3 pr-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+                                >
+                                    <input
+                                        type="text"
+                                        name="name"
+                        id="name"
+                        class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                        placeholder="Qflw Patron"
+                      />
+                      <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                        <select
+                          id="name-color-dropdown"
+                          name="name-color-dropdown"
+                          aria-label="name-color-dropdown"
+                          class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                         >
-                            <input
-                                type="text"
-                                name="name"
-                id="name"
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                placeholder="Qflw Patron"
-              />
-              <div class="grid shrink-0 grid-cols-1 focus-within:relative">
-                <select
-                  id="name-color-dropdown"
-                  name="name-color-dropdown"
-                  aria-label="name-color-dropdown"
-                  class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                >
-                  <option value="">Geen</option>
-                  <option value="Red">Rood</option>
-                  <option value="Blue">Blauw</option>
-                  <option value="Green">Groen</option>
-                  <option value="Yellow">Geel</option>
-                  <option value="Purple">Paars</option>
-                  <option value="Grey">Grijs</option>
-                  <option value="Dark Grey">Donker Grijs</option>
-                  <option value="Black">Zwart</option>
-                  <option value="Orange">Oranje</option>
-                </select>
-                <svg
-                  class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+                          <option value="">Geen</option>
+                          <option value="Red">Rood</option>
+                          <option value="Blue">Blauw</option>
+                          <option value="Green">Groen</option>
+                          <option value="Yellow">Geel</option>
+                          <option value="Purple">Paars</option>
+                          <option value="Grey">Grijs</option>
+                          <option value="Dark Grey">Donker Grijs</option>
+                          <option value="Black">Zwart</option>
+                          <option value="Orange">Oranje</option>
+                        </select>
+                        <svg
+                          class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        <div class="mb-4">
-          <label
-            for="telefoon"
-            class="block text-sm/6 font-medium text-white text-1xl"
-            >Telefoon Nummer (Optioneel):</label
-          >
-          <div class="mt-2">
-            <div
-              class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
-            >
-              <input
-                type="text"
-                id="telefoon"
-                name="telefoon"
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                placeholder="Telefoon Nummer"
-              />
-              <div class="grid shrink-0 grid-cols-1 focus-within:relative">
-                <select
-                  id="phone-color-dropdown"
-                  name="phone-color-dropdown"
-                  aria-label="Phone Color"
-                  class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                >
-                  <option value="">Geen</option>
-                  <option value="Red">Rood</option>
-                  <option value="Blue">Blauw</option>
-                  <option value="Green">Groen</option>
-                  <option value="Yellow">Geel</option>
-                  <option value="Purple">Paars</option>
-                  <option value="Grey">Grijs</option>
-                  <option value="Dark Grey">Donker Grijs</option>
-                  <option value="Black">Zwart</option>
-                  <option value="Orange">Oranje</option>
-                </select>
-                <svg
-                  class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+                <div class="mb-4">
+                  <label
+                    for="telefoon"
+                    class="block text-sm/6 font-medium text-white text-1xl"
+                    >Telefoon Nummer (Optioneel):</label
+                  >
+                  <div class="mt-2">
+                    <div
+                      class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+                    >
+                      <input
+                        type="text"
+                        id="telefoon"
+                        name="telefoon"
+                        class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                        placeholder="Telefoon Nummer"
+                      />
+                      <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                        <select
+                          id="phone-color-dropdown"
+                          name="phone-color-dropdown"
+                          aria-label="Phone Color"
+                          class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                        >
+                          <option value="">Geen</option>
+                          <option value="Red">Rood</option>
+                          <option value="Blue">Blauw</option>
+                          <option value="Green">Groen</option>
+                          <option value="Yellow">Geel</option>
+                          <option value="Purple">Paars</option>
+                          <option value="Grey">Grijs</option>
+                          <option value="Dark Grey">Donker Grijs</option>
+                          <option value="Black">Zwart</option>
+                          <option value="Orange">Oranje</option>
+                        </select>
+                        <svg
+                          class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        <div>
-          <label
-            for="deepweb"
-            class="block text-sm/6 font-medium text-white text-1xl"
-            >Deepweb (Optioneel):</label
-          >
-          <div class="mt-2">
-            <div
-              class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
-            >
-              <input
-                type="text"
-                id="deepweb"
-                name="deepweb"
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                placeholder="Deepweb"
-              />
-              <div class="grid shrink-0 grid-cols-1 focus-within:relative">
-                <select
-                  id="deepweb-color-dropdown"
-                  name="deepweb-color-dropdown"
-                  aria-label="Deepweb Color"
-                  class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                >
-                  <option value="">Geen</option>
-                  <option value="Red">Rood</option>
-                  <option value="Blue">Blauw</option>
-                  <option value="Green">Groen</option>
-                  <option value="Yellow">Geel</option>
-                  <option value="Purple">Paars</option>
-                  <option value="Grey">Grijs</option>
-                  <option value="Dark Grey">Donker Grijs</option>
-                  <option value="Black">Zwart</option>
-                  <option value="Orange">Oranje</option>
-                </select>
-                <svg
-                  class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </div>
+                <div>
+                  <label
+                    for="deepweb"
+                    class="block text-sm/6 font-medium text-white text-1xl"
+                    >Deepweb (Optioneel):</label
+                  >
+                  <div class="mt-2">
+                    <div
+                      class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+                    >
+                      <input
+                        type="text"
+                        id="deepweb"
+                        name="deepweb"
+                        class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                        placeholder="Deepweb"
+                      />
+                      <div class="grid shrink-0 grid-cols-1 focus-within:relative">
+                        <select
+                          id="deepweb-color-dropdown"
+                          name="deepweb-color-dropdown"
+                          aria-label="Deepweb Color"
+                          class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                        >
+                          <option value="">Geen</option>
+                          <option value="Red">Rood</option>
+                          <option value="Blue">Blauw</option>
+                          <option value="Green">Groen</option>
+                          <option value="Yellow">Geel</option>
+                          <option value="Purple">Paars</option>
+                          <option value="Grey">Grijs</option>
+                          <option value="Dark Grey">Donker Grijs</option>
+                          <option value="Black">Zwart</option>
+                          <option value="Orange">Oranje</option>
+                        </select>
+                        <svg
+                          class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div id="output-container" class="p-4 ">
+                <div>
+                  <label
+                    for="output-field"
+                    class="block text-sm/6 font-medium text-white text-1xl"
+                    >Output Field:</label
+                  >
+                  <div class="mt-2">
+                    <div
+                      class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+                    >
+                      <input
+                        type="text"
+                        id="output-field"
+                        readonly
+                        class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                        placeholder="Output Field"
+                      />
+                    </div>
+                  </div>
+                </div>
 
-      <div id="output-container" class="p-4">
-        <div>
-          <label
-            for="output-field"
-            class="block text-sm/6 font-medium text-white text-1xl"
-            >Output Field:</label
-          >
-          <div class="mt-2">
-            <div
-              class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
-            >
-              <input
-                type="text"
-                id="output-field"
-                readonly
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                placeholder="Output Field"
-              />
+                <div>
+                  <label
+                    for="key-input"
+                    class="block text-sm/6 font-medium text-white text-1xl"
+                    >Kies een toets:</label
+                  >
+                  <div class="mt-2">
+                    <div
+                      class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+                    >
+                      <input
+                        type="text"
+                        id="key-input"
+                        maxlength="15"
+                        placeholder="bijv. F10"
+                        class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button id="copy-button" class="bg-blue-500 text-white p-2 mt-4">Kopieer Tekst</button>
             </div>
-          </div>
-        </div>
-
-        <div>
-          <label
-            for="key-input"
-            class="block text-sm/6 font-medium text-white text-1xl"
-            >Kies een toets:</label
-          >
-          <div class="mt-2">
-            <div
-              class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
-            >
-              <input
-                type="text"
-                id="key-input"
-                maxlength="15"
-                placeholder="bijv. F10"
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-              />
+            <div id="f8-output-container" class="p-4">
+                <div>
+                  <label
+                    for="f8-output-field"
+                    class="block text-sm/6 font-medium text-white text-1xl"
+                    >F8 Code:</label
+                  >
+                  <div class="mt-2">
+                    <div
+                      class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+                    >
+                      <input
+                        type="text"
+                        id="f8-output-field"
+                        readonly
+                        class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                        placeholder="F8 Code"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button id="copy-f8-button" class="bg-blue-500 text-white p-2 mt-4">
+                  Kopieer F8 Code
+                </button>
             </div>
-          </div>
         </div>
-        <button id="copy-button" class="bg-blue-500 text-white p-2 mt-4">Kopieer Tekst</button>
-      </div>
-
-      <div id="f8-output-container" class="p-4">
-        <div>
-          <label
-            for="f8-output-field"
-            class="block text-sm/6 font-medium text-white text-1xl"
-            >F8 Code:</label
-          >
-          <div class="mt-2">
-            <div
-              class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
-            >
-              <input
-                type="text"
-                id="f8-output-field"
-                readonly
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                placeholder="F8 Code"
-              />
+        <footer class="bg-gray-900 text-white py-8 w-full fixed bottom-0 left-0 right-0">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                  <h5 class="text-lg font-bold">Fivem Visite Kaartje</h5>
+                  <p class="text-sm">
+                    &copy; fivemvisitekaartje.nl 2025 - All rights reserved
+                  </p>
+                </div>
+                <div class="w-full md:w-1/3">
+                  <h6 class="text-lg font-semibold">Links</h6>
+                  <a
+                    href="https://discord.com/users/1265737667975577721"
+                    target="_blank"
+                    class="flex items-center mb-2"
+                  >
+                    <img
+                    src="Images/discord.png"
+                    alt="Discord Logo"
+                    class="w-6 h-6 mr-2"
+                    />
+                    qflw9
+                  </a>
+                  <a
+                    href="https://discord.com/users/908007927170867231"
+                    target="_blank"
+                    class="flex items-center"
+                  >
+                    <img
+                    src="Images/discord.png"
+                    alt="Discord Logo"
+                    class="w-6 h-6 mr-2"
+                    />
+                    pinda.pdf
+                  </a>
+                </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <button id="copy-f8-button" class="bg-blue-500 text-white p-2 mt-4">
-          Kopieer F8 Code
-        </button>
-      </div>
-
-    <footer class="bg-gray-900 text-white py-8 w-full fixed left-0 right-0 z-50">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-between">
-        <div class="w-full md:w-1/3 mb-6 md:mb-0">
-          <h5 class="text-lg font-bold">Fivem Visite Kaartje</h5>
-          <p class="text-sm">
-            &copy; fivemvisitekaartje.nl 2025 - All rights reserved
-          </p>
-        </div>
-        <div class="w-full md:w-1/3">
-          <h6 class="text-lg font-semibold">Links</h6>
-          <a
-            href="https://discord.com/users/1265737667975577721"
-            target="_blank"
-            class="flex items-center mb-2"
-          >
-            <img
-            src="Images/discord.png"
-            alt="Discord Logo"
-            class="w-6 h-6 mr-2"
-            />
-            qflw9
-          </a>
-          <a
-            href="https://discord.com/users/908007927170867231"
-            target="_blank"
-            class="flex items-center"
-          >
-            <img
-            src="Images/discord.png"
-            alt="Discord Logo"
-            class="w-6 h-6 mr-2"
-            />
-            pinda.pdf
-          </a>
-        </div>
-        </div>
-      </div>
-    </footer>
+        </footer>
     </div>
-
     <script src="JS/burger.js"></script>
   </body>
 </html>

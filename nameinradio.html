@@ -4,68 +4,111 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fivem Visitekaartje</title>
-        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
         <meta property="og:title" content="Fivem Visitekaartje">
         <meta property="og:description" content="Maak je eigen visitekaartje voor Fivem.">
         <meta property="og:image" content="fivemvisitekaartje.png">
         <meta property="og:url" content="https://fivemvisitekaartje.nl/">
         <link rel="shortcut icon" href="FVS.png" type="image/x-icon">
     </head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Onderwereld</a>
-        <a href="overheid.html">Overheid</a>
-        <a href="nameinradio.html">Name In Radio</a>
-        <a href="templates.html">Templates</a>
-    </div>
-
-    <!-- <div class="maintenance-container">
-        <h1>Website Onderhoud</h1>
-        <p>Onze website is momenteel in onderhoud. Probeer het later opnieuw.</p>
-    </div> -->
-
-    <div id="info">
-        <label for="roepnummer">Roepnummer:</label><br>
-        <input type="text" id="roepnummer" name="roepnummer" required><br>
-
-        <label for="name">Naam:</label><br>
-        <input type="text" id="name" name="name" required><br>
-    </div>
-
-    <div id="preview">
-        <span>Name In Radio Preview:</span>
-        <div id="card">
-            <span id="naamoutput">Geen Naam Ingevuld</span>
+<body class="bg-gray-800 text-white pt-20 flex items-center justify-center">
+    <div class="container min-h-screen flex flex-col items-center justify-between">
+        <nav class="bg-white border-gray-200 dark:bg-gray-900 w-full fixed top-0 left-0 right-0 z-50">
+            <div class="navbar">
+                <a href="index.html">Onderwereld</a>
+                <a href="overheid.html">Overheid</a>
+                <a href="nameinradio.html">Name In Radio</a>
+                <a href="templates.html">Templates</a>
+            </div>
+        </nav>
+        <div class="flex justify-center flex-grow w-full">
+            <div class="w-full max-w-4xl">
+                <div id="info">
+                    <label for="roepnummer" class="block text-sm/6 font-medium text-white text-1xl">Roepnummer:</label><br>
+                    <div class="mt-2">
+                        <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                            <input type="text" id="roepnummer" name="roepnummer" required class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                        </div>
+                    </div>
+                    <label for="roepnummer-color-dropdown" class="block text-sm/6 font-medium text-white text-1xl">Kies een kleur voor Roepnummer:</label>
+                    <select id="roepnummer-color-dropdown" class="color-dropdown col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        <option value="">Geen</option>
+                        <option value="Red">Rood</option>
+                        <option value="Blue">Blauw</option>
+                        <option value="Green">Groen</option>
+                        <option value="Yellow">Geel</option>
+                        <option value="Purple">Paars</option>
+                        <option value="Grey">Grijs</option>
+                        <option value="Dark Grey">Donker Grijs</option>
+                        <option value="Black">Zwart</option>
+                        <option value="Orange">Oranje</option>
+                    </select><br>
+                    <label for="name" class="block text-sm/6 font-medium text-white text-1xl">Naam:</label><br>
+                    <div class="mt-2">
+                        <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                            <input type="text" id="name" name="name" required class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                        </div>
+                    </div>
+                    <label for="name-color-dropdown" class="block text-sm/6 font-medium text-white text-1xl">Kies een kleur voor Naam:</label>
+                    <select id="name-color-dropdown" class="color-dropdown col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        <option value="">Geen</option>
+                        <option value="Red">Rood</option>
+                        <option value="Blue">Blauw</option>
+                        <option value="Green">Groen</option>
+                        <option value="Yellow">Geel</option>
+                        <option value="Purple">Paars</option>
+                        <option value="Grey">Grijs</option>
+                        <option value="Dark Grey">Donker Grijs</option>
+                        <option value="Black">Zwart</option>
+                        <option value="Orange">Oranje</option>
+                    </select>
+                </div>
+                <div id="preview">
+                    <span>Name In Radio Preview:</span>
+                    <div id="card">
+                        <span id="naamoutput">Geen Naam Ingevuld</span>
+                    </div>
+                </div>
+                <div id="output-container">
+                    <label for="output-field" class="block text-sm/6 font-medium text-white text-1xl">Output Field:</label><br>
+                    <div class="mt-2">
+                        <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                            <input type="text" id="output-field" readonly class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                        </div>
+                    </div>
+                    <label for="key-input" class="block text-sm/6 font-medium text-white text-1xl">Kies een toets:</label><br>
+                    <div class="mt-2">
+                        <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                            <input type="text" id="key-input" maxlength="15" placeholder="bijv. F10" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                        </div>
+                    </div>
+                </div>
+                <div id="f8-output-container">
+                    <label for="f8-output-field" class="block text-sm/6 font-medium text-white text-1xl">F8 Code:</label><br>
+                    <div class="mt-2">
+                        <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                            <input type="text" id="f8-output-field" readonly class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6">
+                        </div>
+                    </div>
+                    <button id="copy-f8-button" class="bg-blue-500 text-white p-2 mt-4">Kopieer F8 Code</button>
+                </div>
+            </div>
         </div>
+        <footer class="bg-gray-900 text-white py-8 w-full fixed bottom-0 left-0 right-0">
+            <div class="footer">
+                <a href="https://discord.com/users/1265737667975577721" target="_blank">
+                    <img src="discord.png" alt="Discord Logo">
+                    qflw9
+                </a>
+            </div>
+            <div class="footer">
+                <a href="https://discord.com/users/908007927170867231" target="_blank">
+                    <img src="discord.png" alt="Discord Logo">
+                    pinda.pdf
+                </a>
+            </div>
+        </footer>
     </div>
-
-    <div id="output-container">
-        
-        <input type="text" id="output-field" readonly style="width: 90%;">
-        <label for="key-input">Kies een toets:</label><br>
-        <input type="text" id="key-input" maxlength="15" placeholder="bijv. F10"><br>
-    </div>
-
-    <div id="f8-output-container">
-        <label for="f8-output-field">F8 Code:</label><br>
-        <input type="text" id="f8-output-field" readonly>
-        <button id="copy-f8-button">Kopieer F8 Code</button>
-    </div>
-
-    <div class="footer">
-        <a href="https://discord.com/users/1265737667975577721" target="_blank">
-            <img src="discord.png" alt="Discord Logo">
-            qflw9
-        </a>
-    </div>
-
-    <div class="footer">
-        <a href="https://discord.com/users/908007927170867231" target="_blank">
-            <img src="discord.png" alt="Discord Logo">
-            pinda.pdf
-        </a>
-    </div>
-    
     <script src="JS/nameinradio.js"></script>
 </body>
 </html>

@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const deepwebInput = document.getElementById('deepweb');
     const deepwebColorDropdown = document.getElementById('deepweb-color-dropdown');
 
-    const nameOutput = document.getElementById('naamoutput');
     const outputField = document.getElementById('output-field');
-    const copyButton = document.getElementById('copy-button'); // Ensure this element exists in the HTML
+    const copyButton = document.getElementById('copy-button');
 
     const keyInput = document.getElementById('key-input');
     const f8OutputField = document.getElementById('f8-output-field');
@@ -74,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const formattedDeepweb = deepweb ? `${deepwebColor}${deepweb}~s~` : '';
 
         const formattedOutput = [formattedName, formattedPhone, formattedDeepweb].filter(Boolean).join(' | ');
-        nameOutput.innerHTML = applyStyles(formattedOutput);
         outputField.value = formattedOutput;
 
         updateF8Code();
